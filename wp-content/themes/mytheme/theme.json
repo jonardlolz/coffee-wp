@@ -1,0 +1,111 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "48rem",
+      "wideSize": "80rem"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        {
+          "slug": "cream",
+          "name": "Cream",
+          "color": "#f5f0e7"
+        },
+        {
+          "slug": "paper",
+          "name": "Warm white",
+          "color": "#fbf9f4"
+        },
+        {
+          "slug": "ink",
+          "name": "Espresso ink",
+          "color": "#29231d"
+        },
+        {
+          "slug": "coffee",
+          "name": "Coffee",
+          "color": "#4a3528"
+        },
+        {
+          "slug": "caramel",
+          "name": "Caramel",
+          "color": "#bc855b"
+        },
+        {
+          "slug": "cream-white",
+          "name": "Cream white",
+          "color": "#fffaf3"
+        }
+      ]
+    },
+    "spacing": {
+      "units": ["%", "px", "rem", "vh", "vw"],
+      "padding": true,
+      "margin": true
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "Georgia, 'Times New Roman', serif",
+          "slug": "serif",
+          "name": "Editorial serif"
+        },
+        {
+          "fontFamily": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+          "slug": "sans",
+          "name": "Clean sans"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "size": "0.875rem",
+          "name": "Small"
+        },
+        {
+          "slug": "medium",
+          "size": "1rem",
+          "name": "Medium"
+        },
+        {
+          "slug": "large",
+          "size": "1.25rem",
+          "name": "Large"
+        },
+        {
+          "slug": "x-large",
+          "size": "2rem",
+          "name": "Extra large"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--cream)",
+      "text": "var(--wp--preset--color--ink)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--sans)",
+      "lineHeight": "1.65"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--coffee)"
+        },
+        ":hover": {
+          "color": {
+            "text": "var(--wp--preset--color--caramel)"
+          }
+        }
+      }
+    }
+  }
+}

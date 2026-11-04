@@ -1,0 +1,666 @@
+/*
+Theme Name: Morrow Coffee
+Author: Your Name
+Description: A warm, editorial block theme for a neighborhood coffee shop.
+Version: 1.0.0
+Requires at least: 6.6
+Requires PHP: 7.4
+Text Domain: mytheme
+*/
+
+:root {
+  --morrow-cream: #f5f0e7;
+  --morrow-paper: #fbf9f4;
+  --morrow-ink: #29231d;
+  --morrow-brown: #4a3528;
+  --morrow-muted: #746b61;
+  --morrow-caramel: #bc855b;
+  --morrow-line: rgba(41, 35, 29, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  background: var(--morrow-cream);
+  color: var(--morrow-ink);
+  font-family: var(--wp--preset--font-family--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--morrow-caramel);
+}
+
+.site-header {
+  position: absolute;
+  z-index: 5;
+  inset: 0 0 auto;
+  color: #fffaf3;
+}
+
+.site-header-inner {
+  width: min(100% - 3rem, 80rem);
+  min-height: 5.75rem;
+  margin-inline: auto !important;
+  border-bottom: 1px solid rgba(255, 250, 243, 0.24);
+}
+
+.brand-lockup {
+  gap: 0.75rem !important;
+}
+
+.brand-mark {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid rgba(255, 250, 243, 0.75);
+  border-radius: 50%;
+  color: #fffaf3;
+  font-family: var(--wp--preset--font-family--serif);
+  font-size: 1.2rem;
+}
+
+.brand-title {
+  margin: 0;
+  font-family: var(--wp--preset--font-family--serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.brand-title a,
+.brand-title a:hover {
+  color: #fffaf3;
+  text-decoration: none;
+}
+
+.site-tagline {
+  margin: 0;
+  color: rgba(255, 250, 243, 0.72);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.site-navigation {
+  color: #fffaf3;
+  font-size: 0.77rem;
+}
+
+.site-navigation a {
+  color: rgba(255, 250, 243, 0.9);
+  text-decoration: none;
+}
+
+.site-navigation a:hover {
+  color: #fff;
+}
+
+.header-visit {
+  display: inline-flex;
+  min-height: 2.6rem;
+  align-items: center;
+  border: 1px solid rgba(255, 250, 243, 0.72);
+  padding: 0.65rem 1rem;
+  color: #fffaf3;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header-visit:hover {
+  background: #fffaf3;
+  color: var(--morrow-ink);
+}
+
+.coffee-hero {
+  position: relative;
+  display: flex;
+  min-height: min(52rem, 100svh);
+  align-items: center;
+  overflow: hidden;
+  background-color: #3a2a21;
+  background-image:
+    linear-gradient(90deg, rgba(28, 22, 18, 0.8) 0%, rgba(28, 22, 18, 0.54) 45%, rgba(28, 22, 18, 0.12) 100%),
+    linear-gradient(0deg, rgba(28, 22, 18, 0.38), transparent 46%),
+    url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=2200&q=85");
+  background-position: center;
+  background-size: cover;
+  color: #fffaf3;
+}
+
+.coffee-hero-inner {
+  width: min(100% - 3rem, 80rem);
+  margin-inline: auto !important;
+  padding-block: 10rem 7rem;
+}
+
+.coffee-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0 0 1.4rem;
+  color: #e4bb94;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.coffee-eyebrow::before {
+  width: 2rem;
+  height: 1px;
+  background: currentColor;
+  content: "";
+}
+
+.coffee-hero h1 {
+  max-width: 10ch;
+  margin: 0;
+  color: #fffaf3;
+  font-family: var(--wp--preset--font-family--serif);
+  font-size: clamp(4rem, 9.5vw, 8rem);
+  font-weight: 400;
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+}
+
+.coffee-hero h1 em {
+  color: #e4bb94;
+  font-weight: 400;
+}
+
+.coffee-hero-copy {
+  max-width: 31rem;
+  margin: 1.6rem 0 1.9rem;
+  color: rgba(255, 250, 243, 0.82);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+}
+
+.coffee-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.coffee-button,
+.coffee-button-outline {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.75rem 1.15rem;
+  border: 1px solid #fffaf3;
+  background: #fffaf3;
+  color: var(--morrow-ink);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.coffee-button::after {
+  content: "↗";
+  font-size: 1rem;
+}
+
+.coffee-button:hover {
+  border-color: #e4bb94;
+  background: #e4bb94;
+  color: var(--morrow-ink);
+}
+
+.coffee-button-outline {
+  background: transparent;
+  color: #fffaf3;
+}
+
+.coffee-button-outline:hover {
+  background: #fffaf3;
+  color: var(--morrow-ink);
+}
+
+.hero-caption {
+  position: absolute;
+  right: max(1.5rem, calc((100vw - 80rem) / 2));
+  bottom: 2rem;
+  color: rgba(255, 250, 243, 0.76);
+  font-size: 0.62rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.coffee-section {
+  padding-block: clamp(5rem, 9vw, 8rem);
+}
+
+.menu-section {
+  background: var(--morrow-paper);
+}
+
+.coffee-container {
+  width: min(100% - 3rem, 80rem);
+  margin-inline: auto !important;
+}
+
+.section-intro {
+  max-width: 44rem;
+}
+
+.section-intro h2,
+.story-copy h2,
+.visit-copy h2 {
+  margin: 0;
+  font-family: var(--wp--preset--font-family--serif);
+  font-size: clamp(2.8rem, 5vw, 4.7rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.section-intro > p:last-child,
+.story-copy > p:not(.coffee-eyebrow),
+.visit-copy > p:not(.coffee-eyebrow) {
+  max-width: 34rem;
+  color: var(--morrow-muted);
+}
+
+.menu-heading-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.coffee-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.35rem;
+  color: var(--morrow-brown);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.coffee-text-link::after {
+  content: "↗";
+  font-size: 1rem;
+}
+
+.menu-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-top: 3rem;
+}
+
+.menu-card {
+  border: 1px solid var(--morrow-line);
+  background: var(--morrow-cream);
+}
+
+.menu-card-image {
+  overflow: hidden;
+  aspect-ratio: 1.25;
+  background: #e7ded2;
+}
+
+.menu-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 450ms ease;
+}
+
+.menu-card:hover .menu-card-image img {
+  transform: scale(1.04);
+}
+
+.menu-card-copy {
+  padding: 1.35rem 1.45rem 1.55rem;
+}
+
+.menu-card-copy h3 {
+  margin: 0;
+  font-family: var(--wp--preset--font-family--serif);
+  font-size: 1.55rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.menu-card-copy p {
+  min-height: 3em;
+  margin: 0.5rem 0 0;
+  color: var(--morrow-muted);
+  font-size: 0.87rem;
+}
+
+.menu-card-label {
+  display: block;
+  margin-top: 1.1rem;
+  color: var(--morrow-caramel);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.story-section {
+  background: #eae2d7;
+}
+
+.story-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(3rem, 8vw, 8rem);
+}
+
+.story-photo {
+  position: relative;
+  min-height: 35rem;
+  background: #d3c4b1;
+}
+
+.story-photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-note {
+  position: absolute;
+  right: -1rem;
+  bottom: 2rem;
+  padding: 0.9rem 1.15rem;
+  background: var(--morrow-paper);
+  color: var(--morrow-brown);
+  font-family: var(--wp--preset--font-family--serif);
+  font-style: italic;
+}
+
+.story-copy h2 {
+  max-width: 11ch;
+}
+
+.visit-section {
+  background: var(--morrow-brown);
+  color: #fffaf3;
+}
+
+.visit-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.visit-copy h2 {
+  max-width: 10ch;
+  color: #fffaf3;
+}
+
+.visit-copy > p:not(.coffee-eyebrow) {
+  color: rgba(255, 250, 243, 0.75);
+}
+
+.visit-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  border: 1px solid rgba(255, 250, 243, 0.25);
+  padding: 2rem;
+}
+
+.visit-details h3 {
+  margin: 0 0 0.6rem;
+  color: #e4bb94;
+  font-size: 0.66rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.visit-details p {
+  margin: 0;
+  color: rgba(255, 250, 243, 0.84);
+  font-size: 0.9rem;
+}
+
+.site-footer {
+  background: #211b17;
+  color: rgba(255, 250, 243, 0.72);
+}
+
+.footer-inner {
+  display: flex;
+  width: min(100% - 3rem, 80rem);
+  min-height: 6.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-inline: auto !important;
+  font-size: 0.72rem;
+}
+
+.footer-inner p {
+  margin: 0;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-nav a {
+  color: rgba(255, 250, 243, 0.72);
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
+
+.content-shell {
+  width: min(100% - 3rem, 52rem);
+  min-height: 70vh;
+  margin-inline: auto;
+  padding-block: 10rem 6rem;
+}
+
+.content-shell h1,
+.content-shell h2 {
+  font-family: var(--wp--preset--font-family--serif);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.content-shell h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+}
+
+.content-shell a {
+  color: var(--morrow-caramel);
+}
+
+.content-shell img {
+  height: auto;
+}
+
+.content-shell .wp-block-post-title a {
+  color: var(--morrow-ink);
+  text-decoration: none;
+}
+
+.content-shell .wp-block-post-date,
+.content-shell .wp-block-post-excerpt {
+  color: var(--morrow-muted);
+}
+
+.not-found {
+  text-align: center;
+}
+
+.not-found h1 {
+  max-width: 14ch;
+  margin-inline: auto;
+}
+
+.wp-site-blocks > main {
+  margin-block-start: 0;
+}
+
+@media (max-width: 800px) {
+  .site-header-inner {
+    width: calc(100% - 2rem);
+    min-height: 5rem;
+    flex-wrap: nowrap;
+    gap: 0.5rem 1rem;
+    padding-block: 0.5rem;
+  }
+
+  .site-navigation {
+    order: 0;
+    flex: 0 0 auto;
+    justify-content: flex-end !important;
+    margin-left: auto !important;
+    font-size: 0.7rem;
+  }
+
+  .site-navigation .wp-block-navigation__container {
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .header-visit {
+    display: none;
+  }
+
+  .coffee-hero {
+    min-height: max(46rem, 100svh);
+    background-position: 58% center;
+  }
+
+  .coffee-hero-inner {
+    width: calc(100% - 2.5rem);
+    padding-block: 10rem 7rem;
+  }
+
+  .coffee-container {
+    width: calc(100% - 2.5rem);
+  }
+
+  .hero-caption {
+    display: none;
+  }
+
+  .menu-heading-row {
+    align-items: start;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .menu-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .menu-card {
+    display: grid;
+    grid-template-columns: 0.85fr 1fr;
+  }
+
+  .menu-card-image {
+    min-height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .menu-card-copy {
+    padding: 1rem;
+  }
+
+  .menu-card-copy p {
+    min-height: 0;
+    font-size: 0.8rem;
+  }
+
+  .story-layout,
+  .visit-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .story-photo {
+    min-height: 26rem;
+  }
+
+  .photo-note {
+    right: 0;
+  }
+
+  .visit-details {
+    gap: 1.5rem;
+    padding: 1.4rem;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding-block: 1.5rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .brand-tagline {
+    display: none;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .header-visit {
+    min-height: 2.25rem;
+    padding-inline: 0.65rem;
+    font-size: 0.58rem;
+  }
+
+  .site-navigation .wp-block-navigation__container {
+    gap: 0.9rem;
+  }
+
+  .visit-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
