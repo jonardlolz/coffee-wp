@@ -159,16 +159,37 @@ a:hover {
   object-fit: cover;
 }
 
-.coffee-hero-inner,
-.coffee-hero .hero-caption {
+.coffee-hero-inner {
   position: relative;
   z-index: 1;
 }
 
 .coffee-hero-inner {
+  display: grid;
   width: min(100% - 3rem, 80rem);
+  grid-template-columns: minmax(0, 1fr) minmax(18rem, 22.5rem);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
   margin-inline: auto !important;
   padding-block: 10rem 7rem;
+}
+
+.coffee-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.coffee-mug-scene {
+  width: 100%;
+  max-width: 22.5rem;
+  aspect-ratio: 1;
+  justify-self: end;
+}
+
+.coffee-mug-scene canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .coffee-eyebrow {
@@ -257,16 +278,6 @@ a:hover {
 .coffee-button-outline:hover {
   background: #fffaf3;
   color: var(--morrow-ink);
-}
-
-.hero-caption {
-  position: absolute;
-  right: max(1.5rem, calc((100vw - 80rem) / 2));
-  bottom: 2rem;
-  color: rgba(255, 250, 243, 0.76);
-  font-size: 0.62rem;
-  letter-spacing: 0.17em;
-  text-transform: uppercase;
 }
 
 .coffee-section {
@@ -587,8 +598,20 @@ a:hover {
   }
 
   .coffee-hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
     width: calc(100% - 2.5rem);
-    padding-block: 10rem 7rem;
+    padding-block: 8rem 5rem;
+  }
+
+  .coffee-mug-scene {
+    width: min(62vw, 16rem);
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .coffee-hero-content {
+    grid-row: 2;
   }
 
   .coffee-container {
