@@ -40,17 +40,20 @@ a:hover {
 }
 
 .site-header {
-  position: absolute;
-  z-index: 5;
-  inset: 0 0 auto;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  background: var(--morrow-brown);
   color: #fffaf3;
+  box-shadow: 0 0.4rem 1.5rem rgba(41, 35, 29, 0.16);
 }
 
 .site-header-inner {
   width: min(100% - 3rem, 80rem);
   min-height: 5.75rem;
   margin-inline: auto !important;
-  border-bottom: 1px solid rgba(255, 250, 243, 0.24);
+  border-bottom: 1px solid rgba(255, 250, 243, 0.18);
 }
 
 .brand-lockup {
@@ -65,8 +68,12 @@ a:hover {
   border: 1px solid rgba(255, 250, 243, 0.75);
   border-radius: 50%;
   color: #fffaf3;
-  font-family: var(--wp--preset--font-family--serif);
-  font-size: 1.2rem;
+}
+
+.brand-mark img {
+  display: block;
+  width: 1.65rem;
+  height: 1.65rem;
 }
 
 .brand-title {
@@ -564,6 +571,13 @@ a:hover {
 
 .wp-site-blocks > main {
   margin-block-start: 0;
+}
+
+@media (max-width: 1200px) {
+   .site-header-inner{
+    
+    width: 100%;
+  }
 }
 
 @media (max-width: 800px) {

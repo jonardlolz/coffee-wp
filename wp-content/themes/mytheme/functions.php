@@ -45,6 +45,14 @@ function mytheme_hero_mug_script_type( $tag, $handle, $src ) {
 }
 add_filter( 'script_loader_tag', 'mytheme_hero_mug_script_type', 10, 3 );
 
+function mytheme_add_favicon() {
+	printf(
+		'<link rel="icon" href="%s" type="image/svg+xml">' . "\n",
+		esc_url( get_theme_file_uri( '/assets/images/coffee-mug.svg' ) )
+	);
+}
+add_action( 'wp_head', 'mytheme_add_favicon', 1 );
+
 function mytheme_editor_styles() {
 	add_theme_support( 'editor-styles' );
 	add_editor_style( 'style.css' );
