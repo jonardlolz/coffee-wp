@@ -140,6 +140,19 @@ a:hover {
   z-index: 0;
 }
 
+.coffee-hero .video-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--morrow-brown) 100%, transparent),
+    color-mix(in srgb, var(--morrow-brown) 90%, transparent),
+    color-mix(in srgb, var(--morrow-brown) 60%, transparent),
+    color-mix(in srgb, var(--morrow-brown) 60%, transparent)
+  );
+}
+
 .coffee-hero .video-background video {
   width: 100%;
   height: 100%;
